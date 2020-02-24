@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6635e151ec8641b8982489042bda055d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_6635e151ec8641b8982489042bda055d" ></div>
+        
+</body>
+<script>    
+    
+            var map_6635e151ec8641b8982489042bda055d = L.map(
+                "map_6635e151ec8641b8982489042bda055d",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_78fe517135b14151beeb11236e419ab4 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_6635e151ec8641b8982489042bda055d);
+        
+    
+            var feature_group_39afec436a6448cd82c4cf9cea2a92d3 = L.featureGroup(
+                {}
+            ).addTo(map_6635e151ec8641b8982489042bda055d);
+        
+    
+            var marker_7d68855bcc4148398def3e44e1760115 = L.marker(
+                [45.3842702, -73.995482],
+                {}
+            ).addTo(feature_group_39afec436a6448cd82c4cf9cea2a92d3);
+        
+    
+            var icon_9ab25fe427014727921c3662282204ec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7d68855bcc4148398def3e44e1760115.setIcon(icon_9ab25fe427014727921c3662282204ec);
+        
+    
+        var popup_97c122da1b59470f9d2c2dd27367d118 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2a9055d298a94f48b26950fb41dc8ae6 = $(`<div id="html_2a9055d298a94f48b26950fb41dc8ae6" style="width: 100.0%; height: 100.0%;">TwitterAPI1</div>`)[0];
+            popup_97c122da1b59470f9d2c2dd27367d118.setContent(html_2a9055d298a94f48b26950fb41dc8ae6);
+        
+
+        marker_7d68855bcc4148398def3e44e1760115.bindPopup(popup_97c122da1b59470f9d2c2dd27367d118)
+        ;
+
+        
+    
+    
+            var marker_40d3660d03c344e8aa55fc0443b13d84 = L.marker(
+                [40.7127281, -74.0060152],
+                {}
+            ).addTo(feature_group_39afec436a6448cd82c4cf9cea2a92d3);
+        
+    
+            var icon_182d47a3a7144e51b9e5021f8cde8a47 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_40d3660d03c344e8aa55fc0443b13d84.setIcon(icon_182d47a3a7144e51b9e5021f8cde8a47);
+        
+    
+        var popup_57d4e5332e3b47c9bba8f4ec9db06b71 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_44916a0c77484d89a9c1d34d276f5ced = $(`<div id="html_44916a0c77484d89a9c1d34d276f5ced" style="width: 100.0%; height: 100.0%;">TwitterAPI2</div>`)[0];
+            popup_57d4e5332e3b47c9bba8f4ec9db06b71.setContent(html_44916a0c77484d89a9c1d34d276f5ced);
+        
+
+        marker_40d3660d03c344e8aa55fc0443b13d84.bindPopup(popup_57d4e5332e3b47c9bba8f4ec9db06b71)
+        ;
+
+        
+    
+    
+            var marker_3c081fd1543c44adb1cebc8e322b57ef = L.marker(
+                [34.0536909, -118.2427666],
+                {}
+            ).addTo(feature_group_39afec436a6448cd82c4cf9cea2a92d3);
+        
+    
+            var icon_7824fc9ef9c74f2fb441fb0887b1734e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3c081fd1543c44adb1cebc8e322b57ef.setIcon(icon_7824fc9ef9c74f2fb441fb0887b1734e);
+        
+    
+        var popup_33ec826833f74410bfb818fefaa3b29d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_531d9b46eb394d58be2c50033fa7608d = $(`<div id="html_531d9b46eb394d58be2c50033fa7608d" style="width: 100.0%; height: 100.0%;">TwitterAPI3</div>`)[0];
+            popup_33ec826833f74410bfb818fefaa3b29d.setContent(html_531d9b46eb394d58be2c50033fa7608d);
+        
+
+        marker_3c081fd1543c44adb1cebc8e322b57ef.bindPopup(popup_33ec826833f74410bfb818fefaa3b29d)
+        ;
+
+        
+    
+    
+            var layer_control_3319f8219ec6454bb5c9243ebaa2351a = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_78fe517135b14151beeb11236e419ab4,
+                },
+                overlays :  {
+                    "Friend\u0027s_locations" : feature_group_39afec436a6448cd82c4cf9cea2a92d3,
+                },
+            };
+            L.control.layers(
+                layer_control_3319f8219ec6454bb5c9243ebaa2351a.base_layers,
+                layer_control_3319f8219ec6454bb5c9243ebaa2351a.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_6635e151ec8641b8982489042bda055d);
+        
+</script>
