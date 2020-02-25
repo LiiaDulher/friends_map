@@ -1,25 +1,14 @@
 import folium
 import geocoder
-import json
-
-
-def read_json(file_name):
-    """
-    (str) -> dict
-    Returns json file as dictionary.
-    """
-    with open(file_name, encoding='utf-8') as file:
-        data = json.load(file)
-    return data
+from twitter import friends_list
 
 
 def get_user_friends(user_id):
     """
     (str) -> list
-    Sends request to Twitter and returns user's friends list.
+    Returns user's friends list.
     """
-    response = read_json('list.json')
-    return response['users']
+    return friends_list(user_id)
 
 
 def get_location(user):
@@ -57,12 +46,13 @@ def create_map(user_id, path):
     Returns map with all user's friends' locations as html file.
     """
     user_friends_map = folium.Map()
-    friends_list = get_user_friends(user_id)
+    user_friends_list = get_user_friends(user_id)
     locations = []
-    for friend in friends_list:
+    for friend in user_friends_list:
         location = get_location(friend)
-        lat, long = get_coordinates(location)
-        locations.append([lat, long, friend['screen_name']])
+        coordinates = get_coordinates(location)
+        if coordinates:
+            locations.append([coordinates[0], coordinates[1], friend['screen_name']])
     fg_loc = locations_layer(locations)
     user_friends_map.add_child(fg_loc)
     user_friends_map.add_child(folium.LayerControl())
