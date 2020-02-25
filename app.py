@@ -5,6 +5,7 @@ from config import Config
 
 app = Flask(__name__)
 app.config.from_object(Config)
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 
 @app.route("/", methods=['GET', "POST"])
@@ -12,9 +13,11 @@ def get_user_id():
     form = UserIdForm()
     if form.validate_on_submit():
         user_id = form.username.data
-        result = friends_map.create_map(user_id, 'templates/')
+        print(user_id)
+        result = friends_map.create_map(user_id, '/home/LiiaDulher/twitter/templates/')
         if result:
-            return render_template(result)
+            with open('/home/LiiaDulher/twitter/templates/' + result) as file:
+                return file.read()
     return render_template('user.html', title="Enter user's id", form=form)
 
 
