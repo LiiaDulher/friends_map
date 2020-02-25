@@ -1,7 +1,7 @@
 #Twitter friends' locations map
 ##Project description
 Creates an app on the site pythonanywhere.com, 
-which can be reached using [this](LiiaDulher.pythonanywhere.com) link.
+which can be reached using [LiiaDulher.pythonanywhere.com](http://LiiaDulher.pythonanywhere.com) link.
 This app creates a map with locations of all user's friends, 
 whose id is given.
 ##Project structure
