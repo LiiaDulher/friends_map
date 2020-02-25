@@ -1,11 +1,17 @@
-{% block content %}
-    <h1>User id</h1>
+<html>
+    <head> </head>
+    <body>
+    <h1>Enter user id</h1>
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>
-            {{ form.user_id.label }}<br>
-            {{ form.user_id(size=32) }}
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
         </p>
         <p>{{ form.submit() }}</p>
     </form>
-{% endblock %}
+    </body>
+</html>
